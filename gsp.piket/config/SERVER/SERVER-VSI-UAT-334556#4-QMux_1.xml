@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<mux class="mux.MuxPLN" logger="SERVER-VSI-UAT-334556-Logger" name="SERVER-VSI-UAT-334556-QMux_1">
+  <in>SERVER-VSI-UAT-334556-ChAdaptor_1-receive</in>
+  <out>SERVER-VSI-UAT-334556-ChAdaptor_1-send</out>
+</mux>

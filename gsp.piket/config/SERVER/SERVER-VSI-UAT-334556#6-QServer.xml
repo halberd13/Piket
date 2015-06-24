@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<server name="SERVER-VSI-UAT-334556-QServer" class="org.jpos.q2.iso.QServer" logger="SERVER-VSI-UAT-334556-Logger">
+  <attr name="port" type="java.lang.Integer">334556</attr>
+  <channel name="SERVER-VSI-UAT-334556-QServerChannel" class="channel.GSP_Tail_03" logger="SERVER-VSI-UAT-334556-Logger" packager="org.jpos.iso.packager.GenericPackager">
+    <property name="packager-config" value="cfg/iso2003ascii.xml"/>
+  </channel>
+  <request-listener class="listener.uat.v2.Normal" logger="SERVER-VSI-UAT-334556-Logger" realm="FREEZER-UAT">
+    <property name="delay_inq_request" value="0"/>
+    <property name="delay_inq_response" value="0"/>
+    <property name="delay_pay_request" value="0"/>
+    <property name="delay_pay_response" value="0"/>
+    <property name="delay_adv_request" value="0"/>
+    <property name="delay_adv_response" value="0"/>
+    <property name="delay_advrepeat_request" value="0"/>
+    <property name="delay_advrepeat_response" value="0"/>
+    <property name="delay_rev_request" value="0"/>
+    <property name="delay_rev_response" value="0"/>
+    <property name="delay_revrepeat_request" value="0"/>
+    <property name="delay_revrepeat_response" value="0"/>
+    <property name="timeout" value="20000"/>
+    <property name="destination-mux" value="SERVER-VSI-UAT-334556-QMuxPooling"/>
+  </request-listener>
+  <request-listener class="listener.switcher.unhandleproduct" logger="SERVER-VSI-UAT-334556-Logger" realm="Unhandle"/>
+</server>

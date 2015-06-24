@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<server name="SERVER-TEKTAYA-UAT-334667-QServer" class="org.jpos.q2.iso.QServer" logger="SERVER-TEKTAYA-UAT-334667-Logger">
+  <attr name="port" type="java.lang.Integer">334667</attr>
+  <channel name="SERVER-TEKTAYA-UAT-334667-QServerChannel" class="channel.GSP_Tail_03" logger="SERVER-TEKTAYA-UAT-334667-Logger" packager="org.jpos.iso.packager.GenericPackager">
+    <property name="packager-config" value="cfg/iso2003ascii.xml"/>
+  </channel>
+  <request-listener class="listener.uat.v2.Normal" logger="SERVER-TEKTAYA-UAT-334667-Logger" realm="FREEZER-UAT">
+    <property name="delay_inq_request" value="0"/>
+    <property name="delay_inq_response" value="0"/>
+    <property name="delay_pay_request" value="0"/>
+    <property name="delay_pay_response" value="0"/>
+    <property name="delay_adv_request" value="0"/>
+    <property name="delay_adv_response" value="0"/>
+    <property name="delay_advrepeat_request" value="0"/>
+    <property name="delay_advrepeat_response" value="0"/>
+    <property name="delay_rev_request" value="0"/>
+    <property name="delay_rev_response" value="0"/>
+    <property name="delay_revrepeat_request" value="0"/>
+    <property name="delay_revrepeat_response" value="0"/>
+    <property name="timeout" value="20000"/>
+    <property name="destination-mux" value="SERVER-TEKTAYA-UAT-334667-QMuxPooling"/>
+  </request-listener>
+  <request-listener class="listener.switcher.unhandleproduct" logger="SERVER-TEKTAYA-UAT-334667-Logger" realm="Unhandle"/>
+</server>

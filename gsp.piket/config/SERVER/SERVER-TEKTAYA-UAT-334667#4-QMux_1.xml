@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<mux class="mux.MuxPLN" logger="SERVER-TEKTAYA-UAT-334667-Logger" name="SERVER-TEKTAYA-UAT-334667-QMux_1">
+  <in>SERVER-TEKTAYA-UAT-334667-ChAdaptor_1-receive</in>
+  <out>SERVER-TEKTAYA-UAT-334667-ChAdaptor_1-send</out>
+</mux>

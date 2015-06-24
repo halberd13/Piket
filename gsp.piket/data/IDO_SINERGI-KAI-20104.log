@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logger class="org.jpos.util.DailyLogListener">
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:50:16 WIT 2014.198">
+  <session-start/>
+</log>
+<log realm="channel/202.43.190.34:50132" at="Fri Nov 28 10:50:16 WIT 2014.562" lifespan="364ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2102"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128104923"/>
+      <field id="12" value="20141128104923"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3|BD#GMR#20141129|00|00"/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.572">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,322 milliseconds ago.  The last packet sent successfully to the server was 63,986,323 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,322 milliseconds ago.  The last packet sent successfully to the server was 63,986,323 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 16 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.574">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,344 milliseconds ago.  The last packet sent successfully to the server was 63,986,345 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,344 milliseconds ago.  The last packet sent successfully to the server was 63,986,345 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 18 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.576">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,366 milliseconds ago.  The last packet sent successfully to the server was 63,986,367 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,366 milliseconds ago.  The last packet sent successfully to the server was 63,986,367 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 20 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.578">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,389 milliseconds ago.  The last packet sent successfully to the server was 63,986,390 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,389 milliseconds ago.  The last packet sent successfully to the server was 63,986,390 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 22 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.580">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,412 milliseconds ago.  The last packet sent successfully to the server was 63,986,413 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,412 milliseconds ago.  The last packet sent successfully to the server was 63,986,413 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 24 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.582">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,433 milliseconds ago.  The last packet sent successfully to the server was 63,986,434 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,433 milliseconds ago.  The last packet sent successfully to the server was 63,986,434 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 26 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.584">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,453 milliseconds ago.  The last packet sent successfully to the server was 63,986,454 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,453 milliseconds ago.  The last packet sent successfully to the server was 63,986,454 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 28 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.587">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,481 milliseconds ago.  The last packet sent successfully to the server was 63,986,483 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,481 milliseconds ago.  The last packet sent successfully to the server was 63,986,483 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 30 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.589">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,505 milliseconds ago.  The last packet sent successfully to the server was 63,986,506 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,505 milliseconds ago.  The last packet sent successfully to the server was 63,986,506 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 32 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.592" lifespan="1ms">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,526 milliseconds ago.  The last packet sent successfully to the server was 63,986,527 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,526 milliseconds ago.  The last packet sent successfully to the server was 63,986,527 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 34 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.595">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,550 milliseconds ago.  The last packet sent successfully to the server was 63,986,551 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,550 milliseconds ago.  The last packet sent successfully to the server was 63,986,551 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 36 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.597">
+  <get connection>
+    <SQLException>The last packet successfully received from the server was 63,986,574 milliseconds ago.  The last packet sent successfully to the server was 63,986,575 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.</SQLException>
+    <SQLState>08S01</SQLState>
+    <VendorError>0</VendorError>
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: The last packet successfully received from the server was 63,986,574 milliseconds ago.  The last packet sent successfully to the server was 63,986,575 milliseconds ago. is longer than the server configured value of 'wait_timeout'. You should consider either expiring and/or testing connection validity before use in your application, increasing the server configured values for client timeouts, or using the Connector/J connection property 'autoReconnect=true' to avoid this problem.
+	at sun.reflect.GeneratedConstructorAccessor18.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:525)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:409)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:1118)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3321)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1940)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2113)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2562)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2512)
+	at com.mysql.jdbc.StatementImpl.executeQuery(StatementImpl.java:1476)
+	at org.jpos.tpl.ConnectionPool.checkConnection(ConnectionPool.java:263)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:211)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+Caused by: java.net.SocketException: Broken pipe
+	at java.net.SocketOutputStream.socketWrite0(Native Method)
+	at java.net.SocketOutputStream.socketWrite(SocketOutputStream.java:109)
+	at java.net.SocketOutputStream.write(SocketOutputStream.java:153)
+	at java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:82)
+	at java.io.BufferedOutputStream.flush(BufferedOutputStream.java:140)
+	at com.mysql.jdbc.MysqlIO.send(MysqlIO.java:3302)
+	... 38 more
+  </get connection>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.599">
+  <Creating connection.../>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:50:16 WIT 2014.997">
+  <Connection was created.../>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:50:16 WIT 2014.997">
+  <get connection>
+    <exception name="Get connection from pool was failed because pool was empty, creating new connection for next request">
+    java.lang.Exception: Get connection from pool was failed because pool was empty, creating new connection for next request
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:247)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:215)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at listener.switcher.SwitcherListener.cekSessionDb(SwitcherListener.java:210)
+	at listener.switcher.SwitcherListener.process(SwitcherListener.java:120)
+	at org.jpos.iso.ISOServer$Session.run(ISOServer.java:142)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+    </exception>
+  </get connection>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:50:17 WIT 2014.7" lifespan="1ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2102"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128104923"/>
+      <field id="12" value="20141128104923"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="BD#GMR#20141129|00|00"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:50:19 WIT 2014.736" lifespan="63989817ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2112"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128104923"/>
+      <field id="12" value="20141128104923"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="BD#GMR#20141129|01|01|212#ARGO CANTIK#29-11-2014#29-11-2014#0600#0900#A:4:E:109000:99000:0##121#DEDET1#29-11-2014#29-11-2014#0700#1000#A:98:E:97000:97000:10000;B:127:B:77000:77000:8000;C:106:K:57000:57000:6000##122#DEDET2#29-11-2014#29-11-2014#1200#1425#A:18:E:51000:51000:6000;C:170:K:38500:38500:4000##|16eaded9667941db97b90180c0233606"/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="channel/202.43.190.34:50132" at="Fri Nov 28 10:50:19 WIT 2014.738" lifespan="1ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2112"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128104923"/>
+      <field id="12" value="20141128104923"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3|BD#GMR#20141129|01|01|212#ARGO CANTIK#29-11-2014#29-11-2014#0600#0900#A:4:E:109000:99000:0##121#DEDET1#29-11-2014#29-11-2014#0700#1000#A:98:E:97000:97000:10000;B:127:B:77000:77000:8000;C:106:K:57000:57000:6000##122#DEDET2#29-11-2014#29-11-2014#1200#1425#A:18:E:51000:51000:6000;C:170:K:38500:38500:4000##|16eaded9667941db97b90180c0233606"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/202.43.190.34:50132" at="Fri Nov 28 10:50:20 WIT 2014.698" lifespan="3698ms">
+  <receive>
+    <peer-disconnect/>
+  </receive>
+</log>
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:50:20 WIT 2014.699">
+  <session-end/>
+</log>
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:51:09 WIT 2014.902">
+  <session-start/>
+</log>
+<log realm="channel/202.43.190.34:50136" at="Fri Nov 28 10:51:09 WIT 2014.906" lifespan="3ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2103"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128105016"/>
+      <field id="12" value="20141128105016"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3|BD|GMR|20141129|121|1|0|0|C|78484848484|nama#19861111#78484848484#123123# # # # #N|jfjfgj@njfd.com|0700|1000"/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:51:09 WIT 2014.910" lifespan="1ms">
+  <sql-update>
+    INSERT INTO TICKET_LOG_TRAN_DOWN(ID,MTI,TRANS_DATE,CID,PRODUCT_CODE,SW_REF_NUM,PYM_REF_NUM,BANK_CODE,TERMINAL_ID,BOOKING_CODE,AMOUNT,RC,STREAM) VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?)
+2103,20141128105016,4415131,0090501,,,4410010,TRM0001         ,,0,,210340300041808100000590501141128105016201411281050166012074410010074415131TRM0001         116GS10AG3|BD|GMR|20141129|121|1|0|0|C|78484848484|nama#19861111#78484848484#123123# # # # #N|jfjfgj@njfd.com|0700|1000,
+  </sql-update>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:51:09 WIT 2014.919" lifespan="1ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2103"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128105016"/>
+      <field id="12" value="20141128105016"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="BD|GMR|20141129|121|1|0|0|C|78484848484|nama#19861111#78484848484#123123# # # # #N|jfjfgj@njfd.com|0700|1000"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:51:12 WIT 2014.490" lifespan="52753ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2113"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128105016"/>
+      <field id="12" value="20141128105016"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="BD|GMR|20141129|121|MS5CWA|1:0:0|NAMA|Seat=EKON:1:1:A|57000|0|57000|9997144431203|0|E712ECED7BCC4AEA9F751AD14724AC75"/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:51:12 WIT 2014.493">
+  <sql-update>
+    INSERT INTO TICKET_KAI_BOOKING_TRANSACTION(REFF_NUM, STAN, MTI_REQ, MTI_RES, TRAN_DATE, PAN, CID, BANK_CODE, TERMINAL_ID, MERCHANT_TYPE, BOOKING_CODE, PAYMENT_CODE, CUST_NO, BILL_AMOUNT, ADMIN_FEE, TOTAL_AMOUNT, PASSENGERS, TOTAL_PASSENGER, RC, FLAG, ROUTE, CLASS_KA, NO_KA, TGL_KA, REQ_STREAM, RES_STREAM)VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+E712ECED7BCC4AEA9F751AD14724AC75,141128105016,2103,2113,20141128105016,90501,4415131,4410010,TRM0001         ,6012,MS5CWA,9997144431203,9997144431203,57000,0,57000,NAMA,1,0000,1,BD-GMR,EKON,121,2014-11-29,210340300041808100000590501141128105016201411281050166012074410010074415131TRM0001         116GS10AG3|BD|GMR|20141129|121|1|0|0|C|78484848484|nama#19861111#78484848484#123123# # # # #N|jfjfgj@njfd.com|0700|1000,2113403000418281000005905011411281050162014112810501660120744100100744151310000TRM0001         116BD|GMR|20141129|121|MS5CWA|1:0:0|NAMA|Seat=EKON:1:1:A|57000|0|57000|9997144431203|0|E712ECED7BCC4AEA9F751AD14724AC75,
+  </sql-update>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:51:12 WIT 2014.569">
+  <sql-update>
+    INSERT INTO TICKET_LOG_TRAN_DOWN(ID,MTI,TRANS_DATE,CID,PRODUCT_CODE,SW_REF_NUM,PYM_REF_NUM,BANK_CODE,TERMINAL_ID,BOOKING_CODE,AMOUNT,RC,STREAM) VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?)
+2113,20141128105016,4415131,0090501,E712ECED7BCC4AEA9F751AD14724AC75,,4410010,TRM0001         ,MS5CWA,0,0000,2113403000418281000005905011411281050162014112810501660120744100100744151310000TRM0001         124GS10AG3|BD|GMR|20141129|121|MS5CWA|1:0:0|NAMA|Seat=EKON:1:1:A|57000|0|57000|9997144431203|0|E712ECED7BCC4AEA9F751AD14724AC75,
+  </sql-update>
+</log>
+<log realm="channel/202.43.190.34:50136" at="Fri Nov 28 10:51:12 WIT 2014.571" lifespan="1ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2113"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128105016"/>
+      <field id="12" value="20141128105016"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3|BD|GMR|20141129|121|MS5CWA|1:0:0|NAMA|Seat=EKON:1:1:A|57000|0|57000|9997144431203|0|E712ECED7BCC4AEA9F751AD14724AC75"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/202.43.190.34:50136" at="Fri Nov 28 10:51:13 WIT 2014.33" lifespan="3125ms">
+  <receive>
+    <peer-disconnect/>
+  </receive>
+</log>
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:51:13 WIT 2014.33">
+  <session-end/>
+</log>
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:51:33 WIT 2014.764">
+  <session-start/>
+</log>
+<log realm="channel/202.43.190.34:50143" at="Fri Nov 28 10:51:33 WIT 2014.902" lifespan="138ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2100"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105040"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3MS5CWA                              "/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:51:33 WIT 2014.904">
+  <sql-update>
+    INSERT INTO TICKET_LOG_TRAN_DOWN(ID,MTI,TRANS_DATE,CID,PRODUCT_CODE,SW_REF_NUM,PYM_REF_NUM,BANK_CODE,TERMINAL_ID,BOOKING_CODE,AMOUNT,RC,STREAM) VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?)
+2100,20141128105040,4415131,0090501,,,4410010,TRM0001         ,MS5CWA,0,,210040300041808100000590501141128105040201411281050406012074410010074415131TRM0001         043GS10AG3MS5CWA                              ,
+  </sql-update>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:51:33 WIT 2014.916">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2100"/>
+      <field id="2" value="90501"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105040"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="MS5CWA                              "/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:51:34 WIT 2014.367" lifespan="21876ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2110"/>
+      <field id="2" value="90501"/>
+      <field id="4" value="3600000000057000"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105040"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E"/>
+      <field id="62" value="9997144431203       121       DEDET1                                                                                                                                                                                                                                "/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:51:34 WIT 2014.370">
+  <sql-update>
+    INSERT INTO TICKET_LOG_TRAN_DOWN(ID,MTI,TRANS_DATE,CID,PRODUCT_CODE,SW_REF_NUM,PYM_REF_NUM,BANK_CODE,TERMINAL_ID,BOOKING_CODE,AMOUNT,RC,STREAM) VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?)
+2110,20141128105040,4415131,0090501,7D55ED07AFD14BD4A6AF5314FB347D2E,,4410010,TRM0001         ,MS5CWA,57000,0000,21105030004182810004059050136000000000570001411281050402014112810504060120744100100744151310000TRM0001         230MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E2609997144431203       121       DEDET1                                                                                                                                                                                                                                ,
+  </sql-update>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:51:34 WIT 2014.374" lifespan="1ms">
+  <Creating connection.../>
+</log>
+<log realm="persistent.GSPConnectionPool" at="Fri Nov 28 10:51:34 WIT 2014.694">
+  <Connection was created.../>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:51:34 WIT 2014.695">
+  <get connection>
+    <exception name="Get connection from pool was failed because pool was empty, creating new connection for next request">
+    java.lang.Exception: Get connection from pool was failed because pool was empty, creating new connection for next request
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:247)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:208)
+	at org.jpos.tpl.ConnectionPool.getConnection(ConnectionPool.java:189)
+	at persistent.GSPConnectionPool.getConnection(GSPConnectionPool.java:63)
+	at persistent.GSPPersistentEngine.getConnection(GSPPersistentEngine.java:44)
+	at modulehandlers.CommonHandler.logTransToDB(CommonHandler.java:1662)
+	at listener.switcher.SwitcherListener$Process.run(SwitcherListener.java:494)
+	at org.jpos.util.ThreadPool$PooledThread.run(ThreadPool.java:71)
+    </exception>
+  </get connection>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:51:34 WIT 2014.697">
+  <sql-update>
+    INSERT INTO TICKET_TRAN_MAIN(SW_ID,REFF_NUM, PAYMENT_REFF_NUM,STAN,MTI_REQ,MTI_RES,TRAN_DATE,PAN,CID,BANK_CODE,TERMINAL_ID,MERCHANT_TYPE,SCHEDULE_CODE,BOOKING_CODE,PAYMENT_CODE,CUST_NO,OTP,BILL_AMOUNT,ADMIN_FEE,TOTAL_AMOUNT,PASSENGERS,TOTAL_PASSENGER,DEPART_DATE,DEPART_TIME,RC,FLAG,ROUTE,CLASS_KA,NO_KA,TGL_KA,REQ_STREAM,RES_STREAM) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+GS10AG3,7D55ED07AFD14BD4A6AF5314FB347D2E,,141128105040,2100,2110,20141128105040,0090501,4415131,4410010,TRM0001         ,6012,,MS5CWA,9997144431203,9997144431203,,57000,0,57000,,1,2014-11-29,07:00,0000,1,BD (BANDUNG)-GMR (GAMBIR),EKON-1,121,2014-11-29,210040300041808100000590501141128105040201411281050406012074410010074415131TRM0001         043GS10AG3MS5CWA                              ,21105030004182810004059050136000000000570001411281050402014112810504060120744100100744151310000TRM0001         230MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E2609997144431203       121       DEDET1                                                                                                                                                                                                                                ,
+  </sql-update>
+</log>
+<log realm="channel/202.43.190.34:50143" at="Fri Nov 28 10:51:34 WIT 2014.863">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2110"/>
+      <field id="2" value="90501"/>
+      <field id="4" value="3600000000057000"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105040"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E"/>
+      <field id="62" value="9997144431203       121       DEDET1                                                                                                                                                                                                                                "/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/202.43.190.34:50143" at="Fri Nov 28 10:51:36 WIT 2014.33" lifespan="2130ms">
+  <receive>
+    <peer-disconnect/>
+  </receive>
+</log>
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:51:36 WIT 2014.34">
+  <session-end/>
+</log>
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:52:04 WIT 2014.883" lifespan="1ms">
+  <session-start/>
+</log>
+<log realm="channel/202.43.190.34:50151" at="Fri Nov 28 10:52:04 WIT 2014.891" lifespan="8ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2200"/>
+      <field id="2" value="90501"/>
+      <field id="4" value="3600000000057000"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105111"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E"/>
+      <field id="62" value="9997144431203       121       DEDET1                                                                                                                                                                                                                                "/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:52:04 WIT 2014.895">
+  <sql-update>
+    INSERT INTO TICKET_LOG_TRAN_DOWN(ID,MTI,TRANS_DATE,CID,PRODUCT_CODE,SW_REF_NUM,PYM_REF_NUM,BANK_CODE,TERMINAL_ID,BOOKING_CODE,AMOUNT,RC,STREAM) VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?)
+2200,20141128105111,4415131,0090501,7D55ED07AFD14BD4A6AF5314FB347D2E,,4410010,TRM0001         ,GS10AG3MS5CWA,57000,,2200503000418081000405905013600000000057000141128105040201411281051116012074410010074415131TRM0001         237GS10AG3MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E2609997144431203       121       DEDET1                                                                                                                                                                                                                                ,
+  </sql-update>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:52:04 WIT 2014.933">
+  <sql-update>
+    UPDATE CSCCORE_CID_MASTER_QUOTA SET CSC_CMQ_BALANCE=? WHERE CSC_CMQ_ID=?
+4.998664999E9,441513100,
+  </sql-update>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:52:04 WIT 2014.935" lifespan="1ms">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2200"/>
+      <field id="2" value="90501"/>
+      <field id="4" value="3600000000057000"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105111"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E"/>
+      <field id="62" value="9997144431203       121       DEDET1                                                                                                                                                                                                                                "/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/127.0.0.1:7113" at="Fri Nov 28 10:52:05 WIT 2014.602" lifespan="31234ms">
+  <receive>
+    <isomsg direction="incoming">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2210"/>
+      <field id="2" value="90501"/>
+      <field id="4" value="3600000000057000"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105111"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    A517D0AC35E042A6914816AC3791F60B"/>
+      <field id="62" value="9997144431203       121       DEDET1                                                                                                                                                                                                                                "/>
+    </isomsg>
+  </receive>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:52:05 WIT 2014.605">
+  <sql-update>
+    INSERT INTO TICKET_LOG_TRAN_DOWN(ID,MTI,TRANS_DATE,CID,PRODUCT_CODE,SW_REF_NUM,PYM_REF_NUM,BANK_CODE,TERMINAL_ID,BOOKING_CODE,AMOUNT,RC,STREAM) VALUES(UUID(),?,?,?,?,?,?,?,?,?,?,?,?)
+2210,20141128105111,4415131,0090501,7D55ED07AFD14BD4A6AF5314FB347D2E,A517D0AC35E042A6914816AC3791F60B,4410010,TRM0001         ,GS10AG3MS5CWA,57000,0000,2210503200418281000605905013600000000057000141128105040201411281051112014112860120744100100744151310000TRM0001         230MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    A517D0AC35E042A6914816AC3791F60B2609997144431203       121       DEDET1                                                                                                                                                                                                                                099STRUK INI HARUS DITUKARKAN DENGAN TIKET DI STASIUN ONLINE PALING LAMBAT 1 JAM SEBELUM KEBERANGKATAN,
+  </sql-update>
+</log>
+<log realm="Switcher Listener KAI" at="Fri Nov 28 10:52:05 WIT 2014.627">
+  <sql-update>
+    INSERT INTO TICKET_TRAN_MAIN(SW_ID,REFF_NUM, PAYMENT_REFF_NUM,STAN,MTI_REQ,MTI_RES,TRAN_DATE,PAN,CID,BANK_CODE,TERMINAL_ID,MERCHANT_TYPE,SCHEDULE_CODE,BOOKING_CODE,PAYMENT_CODE,CUST_NO,OTP,BILL_AMOUNT,ADMIN_FEE,TOTAL_AMOUNT,PASSENGERS,TOTAL_PASSENGER,DEPART_DATE,DEPART_TIME,RC,FLAG,ROUTE,CLASS_KA,NO_KA,TGL_KA,REQ_STREAM,RES_STREAM) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+GS10AG3,7D55ED07AFD14BD4A6AF5314FB347D2E,A517D0AC35E042A6914816AC3791F60B,141128105040,2200,2210,20141128105111,0090501,4415131,4410010,TRM0001         ,6012,,MS5CWA,9997144431203,9997144431203,,57000,0,57000,,1,2014-11-29,07:00,0000,1,BD (BANDUNG)-GMR (GAMBIR),EKON-1,121,2014-11-29,2200503000418081000405905013600000000057000141128105040201411281051116012074410010074415131TRM0001         237GS10AG3MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    7D55ED07AFD14BD4A6AF5314FB347D2E2609997144431203       121       DEDET1                                                                                                                                                                                                                                ,2210503200418281000605905013600000000057000141128105040201411281051112014112860120744100100744151310000TRM0001         230MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    A517D0AC35E042A6914816AC3791F60B2609997144431203       121       DEDET1                                                                                                                                                                                                                                099STRUK INI HARUS DITUKARKAN DENGAN TIKET DI STASIUN ONLINE PALING LAMBAT 1 JAM SEBELUM KEBERANGKATAN,
+  </sql-update>
+</log>
+<log realm="channel/202.43.190.34:50151" at="Fri Nov 28 10:52:05 WIT 2014.723">
+  <send>
+    <isomsg direction="outgoing">
+      <!-- org.jpos.iso.packager.GenericPackager[cfg/iso2003Packager.xml] -->
+      <field id="0" value="2210"/>
+      <field id="2" value="90501"/>
+      <field id="4" value="3600000000057000"/>
+      <field id="11" value="141128105040"/>
+      <field id="12" value="20141128105111"/>
+      <field id="15" value="20141128"/>
+      <field id="26" value="6012"/>
+      <field id="32" value="4410010"/>
+      <field id="33" value="4415131"/>
+      <field id="39" value="0000"/>
+      <field id="41" value="TRM0001         "/>
+      <field id="48" value="GS10AG3MS5CWA              78484848484                   000000057000000000000000EKON-1:1A                               BD (BANDUNG)        GMR (GAMBIR)        201411290700201411291000                    A517D0AC35E042A6914816AC3791F60B"/>
+      <field id="62" value="9997144431203       121       DEDET1                                                                                                                                                                                                                                "/>
+      <field id="63" value="STRUK INI HARUS DITUKARKAN DENGAN TIKET DI STASIUN ONLINE PALING LAMBAT 1 JAM SEBELUM KEBERANGKATAN"/>
+    </isomsg>
+  </send>
+</log>
+<log realm="channel/202.43.190.34:50151" at="Fri Nov 28 10:52:05 WIT 2014.998" lifespan="1105ms">
+  <receive>
+    <peer-disconnect/>
+  </receive>
+</log>
+<log realm="IDO_SINERGI-KAI-20104-QServer.server.session/202.43.190.34" at="Fri Nov 28 10:52:05 WIT 2014.999">
+  <session-end/>
+</log>

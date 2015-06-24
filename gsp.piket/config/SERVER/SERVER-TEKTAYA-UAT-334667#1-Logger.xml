@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<logger name="SERVER-TEKTAYA-UAT-334667-Logger" class="org.jpos.q2.qbean.LoggerAdaptor">
+  <log-listener class="org.jpos.util.BufferedLogListener">
+    <property name="max-size" value="1"/>
+    <property name="name" value="logger.Q2.buffered"/>
+  </log-listener>
+  <log-listener class="org.jpos.util.DailyLogListener">
+    <property name="window" value="86400"/>
+    <property name="prefix" value="log/SERVER-TEKTAYA-UAT-334667"/>
+    <property name="suffix" value=".log"/>
+    <property name="date-format" value="-yyyyMMdd"/>
+    <property name="compression-format" value="gzip"/>
+  </log-listener>
+</logger>

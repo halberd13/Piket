@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<server name="SERVER-0F-MULTIFINANCE-334433-QServer" class="org.jpos.q2.iso.QServer" logger="SERVER-0A-MULTIFINANCE-334433-Logger">
+  <attr name="port" type="java.lang.Integer">334433</attr>
+  <channel name="SERVER-0F-MULTIFINANCE-334433-QServerChannel" class="channel.GSP_Tail_03" logger="SERVER-0A-MULTIFINANCE-334433-Logger" packager="org.jpos.iso.packager.GenericPackager">
+    <property name="packager-config" value="cfg/iso2003ascii.xml"/>
+  </channel>
+  <request-listener class="listener.switcher.MultifinanceG2" logger="SERVER-0A-MULTIFINANCE-334433-Logger" realm="VSI-MAF_MCF">
+    <property name="kd-sw" value="GS10AG3"/>
+    <property name="max-load" value="1200"/>
+    <property name="timeout" value="20000"/>
+    <property name="ceksignon" value="y"/>
+    <property name="maintaincentralid" value="n"/>
+    <property name="admin" value="1600"/>
+    <property name="debetbalance" value="n"/>
+    <property name="debetincludeadmin" value="y"/>
+    <property name="product" value="86001"/>
+    <property name="cutoff-begin" value="23:45:00"/>
+    <property name="cutoff-end" value="00:15:00"/>
+    <property name="merchantreg" value="6013#6013,6019#6019"/>
+    <property name="cekdeposit" value="y"/>
+    <property name="bankcodereg" value="4410000#4410000"/>
+    <property name="centralidreg" value="4410601#4410601"/>
+    <property name="selfsignon" value="4410601#4410601"/>
+    <property name="selfsignonbyotherbank" value="4410000#4410000"/>
+    <property name="map39" value="0000#00,0014#14"/>
+    <property name="logca" value="y"/>
+    <property name="info-text" value="Bukti pembayaran ini adalah sah"/>
+    <property name="destination-mux" value="SERVER-0B-VSI-MAF_MCF-334433-QMuxPooling"/>
+    <property name="DBPoolName" value="SERVER-0B-VSI-MAF_MCF-334433-DBPool"/>
+    <property name="autoreversal" value="n"/>
+  </request-listener>
+  <request-listener class="listener.switcher.MultifinanceG2" logger="SERVER-0A-MULTIFINANCE-334433-Logger" realm="VSI-WOM">
+    <property name="kd-sw" value="GS10AG3"/>
+    <property name="max-load" value="1200"/>
+    <property name="timeout" value="20000"/>
+    <property name="ceksignon" value="y"/>
+    <property name="maintaincentralid" value="n"/>
+    <property name="admin" value="1600"/>
+    <property name="debetbalance" value="n"/>
+    <property name="debetincludeadmin" value="y"/>
+    <property name="product" value="86002"/>
+    <property name="cutoff-begin" value="23:45:00"/>
+    <property name="cutoff-end" value="00:15:00"/>
+    <property name="merchantreg" value="6013#6013,6019#6019"/>
+    <property name="cekdeposit" value="y"/>
+    <property name="bankcodereg" value="4410000#4410000"/>
+    <property name="centralidreg" value="4410601#4410601"/>
+    <property name="selfsignon" value="4410601#4410601"/>
+    <property name="selfsignonbyotherbank" value="4410000#4410000"/>
+    <property name="map39" value="0000#00,0014#14"/>
+    <property name="logca" value="y"/>
+    <property name="info-text" value="Bukti pembayaran ini adalah sah"/>
+    <property name="destination-mux" value="SERVER-0C-VSI-WOM-334433-QMuxPooling"/>
+    <property name="DBPoolName" value="SERVER-0C-VSI-WOM-334433-DBPool"/>
+    <property name="autoreversal" value="n"/>
+  </request-listener>
+  <request-listener class="listener.switcher.MultifinanceG2" logger="SERVER-0A-MULTIFINANCE-334433-Logger" realm="VSI-BAF">
+    <property name="kd-sw" value="GS10AG3"/>
+    <property name="max-load" value="1200"/>
+    <property name="timeout" value="20000"/>
+    <property name="ceksignon" value="y"/>
+    <property name="maintaincentralid" value="n"/>
+    <property name="admin" value="1600"/>
+    <property name="debetbalance" value="n"/>
+    <property name="debetincludeadmin" value="y"/>
+    <property name="product" value="86003"/>
+    <property name="cutoff-begin" value="23:45:00"/>
+    <property name="cutoff-end" value="00:15:00"/>
+    <property name="merchantreg" value="6013#6013,6019#6019"/>
+    <property name="cekdeposit" value="y"/>
+    <property name="bankcodereg" value="4410000#4410000"/>
+    <property name="centralidreg" value="4410601#4410601"/>
+    <property name="selfsignon" value="4410601#4410601"/>
+    <property name="selfsignonbyotherbank" value="4410000#4410000"/>
+    <property name="map39" value="0000#00,0014#14"/>
+    <property name="logca" value="y"/>
+    <property name="info-text" value="Bukti pembayaran ini adalah sah"/>
+    <property name="destination-mux" value="SERVER-0D-VSI-BAF-334433-QMuxPooling"/>
+    <property name="DBPoolName" value="SERVER-0D-VSI-BAF-334433-DBPool"/>
+    <property name="autoreversal" value="n"/>
+  </request-listener>
+  <request-listener class="listener.switcher.MultifinanceG2" logger="SERVER-0A-MULTIFINANCE-334433-Logger" realm="TEKTAYA-FIF">
+    <property name="kd-sw" value="GS10AG3"/>
+    <property name="max-load" value="1200"/>
+    <property name="timeout" value="20000"/>
+    <property name="ceksignon" value="y"/>
+    <property name="maintaincentralid" value="n"/>
+    <property name="admin" value="1600"/>
+    <property name="debetbalance" value="n"/>
+    <property name="debetincludeadmin" value="y"/>
+    <property name="product" value="86501"/>
+    <property name="cutoff-begin" value="23:45:00"/>
+    <property name="cutoff-end" value="00:15:00"/>
+    <property name="merchantreg" value="6013#6013,6019#6019"/>
+    <property name="cekdeposit" value="y"/>
+    <property name="bankcodereg" value="4410000#4410000"/>
+    <property name="centralidreg" value="4410601#4410601"/>
+    <property name="selfsignon" value="4410601#4410601"/>
+    <property name="selfsignonbyotherbank" value="4410000#4410000"/>
+    <property name="map39" value="0000#00,0014#14"/>
+    <property name="logca" value="y"/>
+    <property name="info-text" value="Bukti pembayaran ini adalah sah"/>
+    <property name="destination-mux" value="SERVER-0E-TEKTAYA-FIF-334433-QMuxPooling"/>
+    <property name="DBPoolName" value="SERVER-0E-TEKTAYA-FIF-334433-DBPool"/>
+    <property name="autoadvice" value="n"/>
+  </request-listener>
+  <request-listener class="listener.switcher.unhandleproduct" logger="SERVER-0A-MULTIFINANCE-334433-Logger" realm="Unhandle"/>
+</server>

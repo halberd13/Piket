@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<connection-pool name="SERVER-0C-VSI-WOM-334433-DBPool" class="persistent.GSPConnectionPool" logger="SERVER-0A-MULTIFINANCE-334433-Logger">
+  <property name="jdbc.driver" value="com.mysql.jdbc.Driver"/>
+  <property name="jdbc.url" value="jdbc:mysql://localhost:3306/GSP_SWITCHER_DEMO_2"/>
+  <property name="jdbc.user" value="sw_user_demo"/>
+  <property name="sql-check-statement" value="select now()"/>
+  <property name="jdbc.password" value="sw_pwd_demo"/>
+  <property name="initial-connections" value="5"/>
+  <property name="startup-connections" value="5"/>
+  <property name="max-connections" value="10"/>
+  <property name="wait-if-busy" value="false"/>
+</connection-pool>

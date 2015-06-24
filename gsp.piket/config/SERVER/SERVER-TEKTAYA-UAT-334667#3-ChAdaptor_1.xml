@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<channel-adaptor name="SERVER-TEKTAYA-UAT-334667-ChAdaptor_1" class="org.jpos.q2.iso.OneShotChannelAdaptor" logger="SERVER-TEKTAYA-UAT-334667-Logger">
+  <channel name="SERVER-TEKTAYA-UAT-334667-ChAdaptor_1-Channel" class="channel.GSP_Tail_03" logger="SERVER-TEKTAYA-UAT-334667-Logger" packager="org.jpos.iso.packager.GenericPackager">
+    <property name="connect-timeout" value="5000"/>
+    <property name="timeout" value="30000"/>
+    <property name="host" value="192.168.168.130"/>
+    <property name="port" value="35000"/>
+    <property name="alternate-host" value="127.0.0.1"/>
+    <property name="alternate-port" value="30141"/>
+    <property name="packager-config" value="cfg/iso2003ascii.xml"/>
+  </channel>
+  <in>SERVER-TEKTAYA-UAT-334667-ChAdaptor_1-send</in>
+  <out>SERVER-TEKTAYA-UAT-334667-ChAdaptor_1-receive</out>
+  <max-connections>5</max-connections>
+  <space>tspace:default</space>
+</channel-adaptor>

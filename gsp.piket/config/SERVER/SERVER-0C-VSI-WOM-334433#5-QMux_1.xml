@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<mux class="mux.MuxPLN" logger="SERVER-0A-MULTIFINANCE-334433-Logger" name="SERVER-0C-VSI-WOM-334433-QMux_1">
+  <in>SERVER-0C-VSI-WOM-334433-ChAdaptor_1-receive</in>
+  <out>SERVER-0C-VSI-WOM-334433-ChAdaptor_1-send</out>
+</mux>
